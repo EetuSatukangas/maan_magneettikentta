@@ -11,7 +11,7 @@ magneettikenttävirhe = 4.237*10**-7
 
 
 
-pl.plot(kulmantangentti, magneettikenttä, 'x')
+pl.plot(kulmantangentti, magneettikenttä, 'x', color='blue', label='datapisteet')
 pl.xlabel('kulman tangentti')
 pl.ylabel('magneettikentän voimakkuus (T)')
 
@@ -29,8 +29,8 @@ pl.legend()
 pl.plot(x, 1.35*10**-5*x+5*10**-6, color='red')
 
 pl.text(1.1 , 50*10**-6, r'$B=1,7055627\cdot 10^{-5} \cdot$tan$(x)-5,2783963\cdot 10^{-6}$', color='blue')
-pl.title(r'Maan magneettikentän x-suuntaisen komponentin suuruus $B_{käämi}=B_{Maa_{x}}\cdot$tan$(x)$')
-pl.errorbar(kulmantangentti, magneettikenttä, xerr=kulmatangentinvirhe, yerr=magneettikenttävirhe, fmt='o')
+pl.title(r'Maan magneettikentän x-suuntainen komponentti $B_{käämi}=B_{Maa_{x}}\cdot$tan$(x)$')
+pl.errorbar(kulmantangentti, magneettikenttä, xerr=kulmatangentinvirhe, yerr=magneettikenttävirhe, fmt='x')
 #print(sovitus)
 
 pl.show()
